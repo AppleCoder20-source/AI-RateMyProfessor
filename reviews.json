@@ -1,0 +1,124 @@
+{
+  "reviews": [
+    {
+      "Professor": "Dr. Jane Smith",
+      "Subject": "Computer Science",
+      "Stars": 5,
+      "Review": "Dr. Smith is an excellent professor! Her lectures are clear, and she is always available for extra help."
+    },
+    {
+      "Professor": "Dr. John Doe",
+      "Subject": "Mathematics",
+      "Stars": 4,
+      "Review": "Very knowledgeable and approachable. Sometimes the material is challenging, but he explains it well."
+    },
+    {
+      "Professor": "Dr. Emily Johnson",
+      "Subject": "Physics",
+      "Stars": 3,
+      "Review": "Dr. Johnson knows her stuff, but her teaching style is a bit dry."
+    },
+    {
+      "Professor": "Dr. Michael Brown",
+      "Subject": "Chemistry",
+      "Stars": 2,
+      "Review": "The lectures are confusing and hard to follow. The exams are tough too."
+    },
+    {
+      "Professor": "Dr. Sarah Davis",
+      "Subject": "Biology",
+      "Stars": 4,
+      "Review": "Great professor! She makes the content interesting and is very supportive."
+    },
+    {
+      "Professor": "Dr. James Wilson",
+      "Subject": "History",
+      "Stars": 5,
+      "Review": "Dr. Wilson is a fantastic storyteller, making history come alive in his classes."
+    },
+    {
+      "Professor": "Dr. Linda Martinez",
+      "Subject": "Philosophy",
+      "Stars": 3,
+      "Review": "Her lectures are thought-provoking, but sometimes hard to grasp without prior knowledge."
+    },
+    {
+      "Professor": "Dr. Robert Anderson",
+      "Subject": "Economics",
+      "Stars": 4,
+      "Review": "Very informative and clear. He ties concepts to real-world scenarios effectively."
+    },
+    {
+      "Professor": "Dr. Karen Thomas",
+      "Subject": "Literature",
+      "Stars": 2,
+      "Review": "The reading load is heavy, and her feedback on essays can be vague."
+    },
+    {
+      "Professor": "Dr. William Jackson",
+      "Subject": "Psychology",
+      "Stars": 5,
+      "Review": "Dr. Jackson is amazing! His classes are engaging, and he truly cares about his students."
+    },
+    {
+      "Professor": "Dr. Patricia Harris",
+      "Subject": "Sociology",
+      "Stars": 3,
+      "Review": "The lectures are okay, but the grading is tough."
+    },
+    {
+      "Professor": "Dr. Mark Lewis",
+      "Subject": "Political Science",
+      "Stars": 4,
+      "Review": "Dr. Lewis is passionate about the subject and encourages critical thinking."
+    },
+    {
+      "Professor": "Dr. Jennifer Walker",
+      "Subject": "Art History",
+      "Stars": 5,
+      "Review": "Her passion for art is contagious. The classes are enjoyable and educational."
+    },
+    {
+      "Professor": "Dr. Charles Hall",
+      "Subject": "Engineering",
+      "Stars": 2,
+      "Review": "The material is hard, and his teaching style isn't very engaging."
+    },
+    {
+      "Professor": "Dr. Elizabeth Young",
+      "Subject": "Nursing",
+      "Stars": 5,
+      "Review": "Dr. Young is very supportive and knowledgeable. She prepares students well for the field."
+    },
+    {
+      "Professor": "Dr. Steven King",
+      "Subject": "Business Administration",
+      "Stars": 4,
+      "Review": "His classes are well-organized, and he provides real-world examples."
+    },
+    {
+      "Professor": "Dr. Laura Hernandez",
+      "Subject": "Anthropology",
+      "Stars": 3,
+      "Review": "Interesting material, but the lectures can be dry at times."
+    },
+    {
+      "Professor": "Dr. Brian Scott",
+      "Subject": "Music",
+      "Stars": 5,
+      "Review": "Dr. Scott is a phenomenal musician and teacher. His passion for music is inspiring."
+    },
+    {
+      "Professor": "Dr. Angela Turner",
+      "Subject": "Environmental Science",
+      "Stars": 4,
+      "Review": "Her classes are informative and she encourages active participation."
+    },
+    {
+      "Professor": "Dr. Richard White",
+      "Subject": "Law",
+      "Stars": 2,
+      "Review": "The material is dense, and his lectures are difficult to follow."
+    }
+  ]
+}

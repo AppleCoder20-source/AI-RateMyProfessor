@@ -49,4 +49,55 @@ export async function POST(req) {
         includeMetadata: true,
         vector: embedding.data[0].embedding
     });
-}
+
+    let resultString = 
+    "\n\nReturned results from vector db(done automatically): "
+
+    results.matches.forEach((match)=>{
+        resultString += "\n";
+        resultString += "Professor: " + match.id + ";";
+        resultString += "Review: " + match.metadata.review + ";";
+        resultString += "Subject: " + match.metadata.subject + ";";
+        resultString += "Stars: " + match.metadata.stars + ";";
+        resultString += "\n\n";
+    })
+
+    const lastMessage = data[data.length-1]
+    const lastMessageContent = lastMessage.content + resultString
+    const lastDataWithoutLastMessage = data.slice(0, data.length-1)
+    const completition = await openai.chat.Completions.create({
+        messages=[{
+            role: 'system',
+            content: systemPrompt},
+            ...lastDataWithoutLastMessage,
+            {
+            role: 'user',
+            content: lastMessageContent
+        }],
+        model: 'gpt-4o-mini',
+        stream: true,
+    });
+
+    const stream = ReadableStream({
+        async start(controller) {
+            const encoder = new TextEncoder();
+            try{
+                for await (const chunk of completion){
+                    const content = chunk.choices[0]?.delta?.content
+                    if (content){
+                        const text = encoder.encode(content)
+                        controller.enqueue(text)
+                    }
+                }
+            }
+            catch (err){
+                controller.error(err)
+            }
+            finally{
+                controller.close()
+            }
+        }
+    })
+
+    return new NextResponse(stream)
+    }

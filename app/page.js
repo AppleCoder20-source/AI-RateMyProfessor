@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Box, Stack } from "mui/material";
 import { useState } from "react";
 
 export default function Home() {
@@ -50,4 +51,25 @@ export default function Home() {
       });
     });
   };
+  return (
+    <Box
+      width="100vw"
+      height="100vh"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Stack
+        direction="column"
+        width="500px"
+        height="700px"
+        border="1px solid black"
+        p={2}
+        spacing={3}
+      >
+        {messages.map((message, index))}
+      </Stack>
+    </Box>
+  );
 }

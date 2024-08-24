@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Box, Stack } from "mui/material";
+import { Box, Stack, TextField } from "@mui/material";
 import { useState } from "react";
+import { Button } from "@mui/material";
 
 export default function Home() {
   const [messages, setMessages] = useState([
@@ -51,6 +52,7 @@ export default function Home() {
       });
     });
   };
+
   return (
     <Box
       width="100vw"
@@ -68,7 +70,44 @@ export default function Home() {
         p={2}
         spacing={3}
       >
-        {messages.map((message, index))}
+        <Stack
+          direction="column"
+          spacing={2}
+          flexGrow={1}
+          overflow={1}
+          maxHeight="100%"
+        ></Stack>
+        {messages.map((message, index) => (
+          <Box
+            key={index}
+            display="flex"
+            justifyContent={
+              message.role === "assistant" ? "flex-start" : "flex-end"
+            }
+          >
+            <Box
+              bgcolor={
+                message.role === "assistant" ? "primary.main" : "secondary.main"
+              }
+              color="white"
+              borderRadius={16}
+              p={3}
+            >
+              {message.content}
+            </Box>
+          </Box>
+        ))}
+      </Stack>
+      <Stack direction="row" spacing={2}>
+        <TextField
+          label="Message"
+          fullWidth
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <Button variant="contained" onClick={sendMessage}>
+          Send
+        </Button>
       </Stack>
     </Box>
   );
